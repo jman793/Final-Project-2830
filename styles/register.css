@@ -1,0 +1,27 @@
+.loginbox{
+    width: 30%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.loginbox button{
+    margin: 10px auto;
+    display: block;
+}
+
+.form-control{
+    margin: 10px auto;
+    width: 80%;
+}
+
+#submitButton{
+    background-color: mediumslateblue;
+    color: white;
+    width: 25%;
+    margin: 10px auto;
+}
+
+#errormessage{
+    color:red;
+}

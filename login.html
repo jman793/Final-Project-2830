@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Car Parts Store</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="js/login.js"></script>
+        <script>
+            $(function(){
+                $.ajax({
+                    url: 'assets/php/validate.php',
+                    success: function(res){
+                        if(res==true){
+                            location.replace("./");
+                        }
+                    }
+                })
+                $(".alert").hide();
+
+            })
+        </script>
+        <link rel="stylesheet" href="./styles/login.css">
+    </head>
+    <body>
+
+        <div class="card loginbox">
+                <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
+                <form>
+                    <input type="text" id="username" placeholder="Username" class="form-control" required>
+                    <input type="password" id="password" placeholder="Password" class="form-control" required>
+                    <button class="btn btn-primary mb-2" onclick="submitLogin()">Login</button>               
+                </form>
+                <div class="alert alert-danger" role="alert">
+                        incorrect username and password combination
+                </div>
+        </div>
+    </body>
+</html>

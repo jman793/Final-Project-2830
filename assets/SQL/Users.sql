@@ -6,7 +6,7 @@ CREATE TABLE users(
 
 CREATE TABLE users_cart(
     email varchar(100),
-    itemid varchar(100),
+    itemid int,
     PRIMARY KEY (email,itemid),
     FOREIGN KEY (email) REFERENCES users(email),
     FOREIGN KEY (itemid) REFERENCES items(itemid)
