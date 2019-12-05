@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Car Parts Store</title>
+        <link rel="stylesheet" href="./styles/addpart.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                $("#navbar").load('templates/navbar.html')
+                $.ajax({
+                    url: './assets/php/validate.php',
+                    success: function(res){
+                        if(!res){
+                            window.location.replace('./login.html')
+                        }
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div class="form-group">
+            <form action="assets/php/addpart.php" method="GET">
+                <label for="partName">Part Name</label>
+                <input type="text" name="partName" id="partName" class="form-control">
+                <label for="partPrice">Part Price</label>
+                <input type="number" id="partPrice" class="form-control" name="partPrice" step=".01">
+                <label for="partDesc">Part Desc</label>
+                <textarea type="text" id="partDesc" class="form-control" name="partDesc"></textarea>
+                <input type="submit" class="btn btn-primary mb-2">
+            </form>
+        </div>
+    </body>
+</html>

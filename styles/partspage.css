@@ -1,0 +1,15 @@
+#list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.part{
+    margin: 10px;
+    width: 200px;
+    max-width: 500px;
+}
+
+#list .ui-selected{
+    background-color: red;
+}

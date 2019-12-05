@@ -1,6 +1,7 @@
 function submitLogin(){
     $.post({
         url:"assets/php/login.php",
+        type: 'post',
         data: {
             username: $("#username").val(),
             password: $("#password").val()

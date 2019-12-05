@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Car Parts Store</title>
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <!-- Latest compiled and minified CSS -->
@@ -15,7 +16,7 @@
         <script>
             $(function(){
                 $.ajax({
-                    url: 'assets/php/validate.php',
+                    url: './assets/php/validate.php',
                     success: function(res){
                         if(res==true){
                             location.replace("./");
@@ -32,11 +33,10 @@
 
         <div class="card loginbox">
                 <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
-                <form>
                     <input type="text" id="username" placeholder="Username" class="form-control" required>
                     <input type="password" id="password" placeholder="Password" class="form-control" required>
-                    <button class="btn btn-primary mb-2" onclick="submitLogin()">Login</button>               
-                </form>
+                    <button class="btn btn-primary mb-2" onclick="submitLogin()">Login</button>
+                    <p> No Account? Click <a href="./register.html">Here</a></p>  
                 <div class="alert alert-danger" role="alert">
                         incorrect username and password combination
                 </div>

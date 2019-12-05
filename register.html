@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Car Parts Store</title>
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="js/register.js"></script>
@@ -17,7 +18,7 @@
             $(function(){
                 $("#navbar").load('templates/navbar.html')
                 $.ajax({
-                    url: 'assets/php/validate.php',
+                    url: './assets/php/validate.php',
                     success: function(res){
                         if(res==true){
                             location.replace("./");

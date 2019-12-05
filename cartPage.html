@@ -1,10 +1,12 @@
-<!-- THIS FILE ONLY EXISTS FOR THE PURPOSES OF QUICKLY CREATING NEW PAGES WITH THE 5 REQUIRED TAGS AND JQUREY -->
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Car Parts Store</title>
+        <link rel="stylesheet" href="./styles/partspage.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
@@ -13,9 +15,11 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="./js/cartpage.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
             $(function(){
-                $("#navbar").load('templates/navbar.html')
+                $("#navbar").load('./templates/navbar.html')
                 $.ajax({
                     url: './assets/php/validate.php',
                     success: function(res){
@@ -29,5 +33,16 @@
     </head>
     <body>
         <div id="navbar"></div>
+        <!-- VISIT https://jqueryui.com/selectable/#serialize  for documentation on how i want to display parts-->
+        <div id="parts">
+            <ol id="list">
+
+            </ol>
+        </div>
+        <div>
+            <button onclick="onDelete()">Delete parts</button>
+            <button onclick="onBuy()">Buy Parts</button>
+            <p>*DISCLAIMER clicking buyParts is only for the purposes of removing parts from the db as I obviously do not actually sell car parts</p>
+        </div>
     </body>
 </html>

@@ -12,9 +12,10 @@ $password=sha1(trim($_POST['password']));
 $username= $mysqli->real_escape_string($username);
 $password= $mysqli->real_escape_string($password);
 
-$query="SELECT COUNT('*') FROM users WHERE username='$username' AND pswrd='$password'";
+$query="SELECT username,pswrd FROM users WHERE username='$username' AND pswrd='$password'";
 $result=$mysqli->query($query);
-if($result>0){
+$assoc=mysqli_fetch_assoc($result);
+if(!empty($assoc)){
     session_start();
     $_SESSION['username']=$username;
     $_SESSION['loggedin']=True;
