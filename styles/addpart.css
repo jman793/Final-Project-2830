@@ -1,4 +1,28 @@
-#partDesc{
+.wrapper{
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin: 100px auto;
+    width: 70%;
+}
+
+.wrapper input{
+    width: 40%;
+    margin: 10px auto;
+}
+
+.wrapper label{
+    text-align: center;
+    display: block;
+}
+
+.wrapper textarea{
     width: 30%;
     height: 200px;
+    margin: 10px auto;
+}
+
+#submitbtn{
+    width: 10%;
+    display: block;
+    margin: 10px auto;
 }

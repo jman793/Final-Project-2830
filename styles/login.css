@@ -1,13 +1,18 @@
 .loginbox{
-    width: 30%;
+    width: 40%;
     border: 1px solid gray;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 100px auto;
+    background-color: #7fcce5;
 }
 
 .loginbox button{
     margin: 10px auto;
     display: block;
+}
+
+.loginbox input{
+    margin-top: 25px;
 }
 
 .form-control{

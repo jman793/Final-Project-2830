@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="styles/register.css">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/global.css">
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -16,7 +17,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <script>
             $(function(){
-                $("#navbar").load('templates/navbar.html')
+                $(".alert").hide();
                 $.ajax({
                     url: './assets/php/validate.php',
                     success: function(res){
@@ -29,16 +30,16 @@
         </script>
     </head>
     <body>
-            <div id="navbar"></div>
 
             <div class="card loginbox">
                     <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
-                    <form>
                         <input type="text" id="username" placeholder="username" class="form-control" required>
                         <input type="password" id="password" placeholder="Password" class="form-control" required>
-                        <input type="password" id="confirm" placeholder="Confirm" class="form-control" required>
-                        <button class="btn btn-primary mb-2" onclick="submitRegister()">Register</button>               
-                    </form>
+                        <button class="btn btn-primary mb-2" onclick="submitRegister()">Register</button> 
+                        <div class="alert alert-danger" role="alert">
+                            This username is already taken
+                    </div>              
             </div>
+            
     </body>
 </html>

@@ -8,11 +8,15 @@ if($mysqli->connect_error){
     exit;
 }
 $username=trim($_POST['username']);
+$password = sha1(trim($_POST["password"]));
+$password= $mysqli->real_escape_string($password);
+$username= $mysqli->real_escape_string($username);
 
-$query="SELECT COUNT('*') FROM users WHERE username='$username'";
+$query="SELECT username,pswrd FROM users WHERE username='$username'";
 $result=$mysqli->query($query);
+$assoc=mysqli_fetch_assoc($result);
 
-if($result<0){
+if(!empty($assoc)){
     echo False;
     exit;
 }

@@ -9,6 +9,7 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
+        <link rel="stylesheet" href="./styles/global.css">
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -17,6 +18,8 @@
         <script>
             $(function(){
                 $("#navbar").load('templates/navbar.html')
+                $("#add").addClass("active");
+
                 $.ajax({
                     url: './assets/php/validate.php',
                     success: function(res){
@@ -30,7 +33,7 @@
     </head>
     <body>
         <div id="navbar"></div>
-        <div class="form-group">
+        <div class="form-group wrapper">
             <form action="assets/php/addpart.php" method="GET">
                 <label for="partName">Part Name</label>
                 <input type="text" name="partName" id="partName" class="form-control">
@@ -38,7 +41,7 @@
                 <input type="number" id="partPrice" class="form-control" name="partPrice" step=".01">
                 <label for="partDesc">Part Desc</label>
                 <textarea type="text" id="partDesc" class="form-control" name="partDesc"></textarea>
-                <input type="submit" class="btn btn-primary mb-2">
+                <input type="submit" class="btn btn-primary mb-2" id="submitbtn">
             </form>
         </div>
     </body>

@@ -2,7 +2,8 @@
     width: 30%;
     border: 1px solid gray;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 100px auto;
+    background-color: #7fcce5;
 }
 
 .loginbox button{
@@ -13,6 +14,10 @@
 .form-control{
     margin: 10px auto;
     width: 80%;
+}
+
+.loginbox input{
+    margin-top: 25px;
 }
 
 #submitButton{

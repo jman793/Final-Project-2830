@@ -10,7 +10,6 @@ function submitRegister(){
                 location.replace("index.html");
             }
             else{
-                console.log("THERE WAS A PROBLEM")
                 $(".alert").show();
             }
         }  

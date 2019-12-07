@@ -8,6 +8,7 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
+        <link rel="stylesheet" href="./styles/global.css">
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -16,6 +17,7 @@
         <script>
             $(function(){
                 $("#navbar").load('templates/navbar.html')
+                $("#about").addClass("active");
                 $.ajax({
                     url: './assets/php/validate.php',
                     success: function(res){
